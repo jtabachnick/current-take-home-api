@@ -1,5 +1,5 @@
 const { Datastore } = require("@google-cloud/datastore");
-const FuzzySearch = require("fuzzy-search");
+const Fuse = require("fuse.js");
 const { v4: uuid } = require("uuid");
 
 const datastore = new Datastore();
@@ -33,12 +33,13 @@ const saveVisit = async (userId, location) => {
 
 const searchVisits = async (userId, searchString) => {
   const data = await listVisits(userId);
-  console.log(data[0]);
   let sortedData = sortVisits(data[0]);
-  const searcher = new FuzzySearch(sortedData, ["name"], {
-    caseSensitive: false,
+
+  const fuse = new Fuse(sortedData, {
+    keys: ['name']
   });
-  const searched = searcher.search(searchString);
+
+  const searched = fuse.search(searchString);
   const cleaned = cleanData(searched);
   return cleaned;
 };

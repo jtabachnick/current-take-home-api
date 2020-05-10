@@ -1,7 +1,0 @@
-indexes:
-- kind: location
-  properties:
-  - name: userId
-    direction: asc
-  - name: visitDate
-    direction: desc
