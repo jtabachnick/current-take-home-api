@@ -1,0 +1,5 @@
+runtime: nodejs10
+
+handlers:
+  secure: always
+  redirect_http_response_code: 301
