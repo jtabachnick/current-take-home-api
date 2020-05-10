@@ -40,7 +40,7 @@ const searchVisits = async (userId, searchString) => {
   });
 
   const searched = fuse.search(searchString);
-  const cleaned = cleanData(searched);
+  const cleaned = cleanData(searched.map(s => s.item));
   return cleaned;
 };
 
