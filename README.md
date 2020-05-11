@@ -71,8 +71,9 @@ npm install
 and 
 
 ```
-node app.js
+node server.js or npm run start
 ```
+
 
 Additionally, you will need a `key.json` file which will allow access to my database (can be provided upon request), alternatively you could supply your own on [Google Cloud Platform](https://cloud.google.com/datastore/).
 
