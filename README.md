@@ -76,6 +76,15 @@ node app.js
 
 Additionally, you will need a `key.json` file which will allow access to my database (can be provided upon request), alternatively you could supply your own on [Google Cloud Platform](https://cloud.google.com/datastore/).
 
+### Running tests
+
+There are unit tests for the API they can be run by running the following command
+```
+npm run test
+```
+
+Notes on testing: I would have liked to get more test coverage, which probably could have been accomplished by creating wrappers for all of the external packages and using jest to mock them. However I ran short on time and was unable to do this. 
+
 ### Dependencies
 
 - [Google Cloud Datastore](https://www.npmjs.com/package/@google-cloud/datastore)
