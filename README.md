@@ -1,6 +1,6 @@
 # current-take-home-api
 
-## base url: `https://current-take-home-api.uk.r.appspot.com/`
+## base url: `https://current-take-home-api.appspot.com/`
 
 ### possible requests
 
