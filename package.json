@@ -1,7 +1,7 @@
 {
   "name": "current-take-home-api",
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "test": "jest"
   },
   "dependencies": {
